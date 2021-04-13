@@ -1,0 +1,59 @@
+<div class="card">
+  <div class="card-header"></div>
+  <div class="card-body">
+
+    <table class="table table-dark table-hover table-striped">
+      <thead>
+
+        <th>ref</th>
+        <th>total</th>
+        <th>totalPaye</th>
+        <th>date</th>
+        <th>Action</th>
+
+      </thead>
+      <tbody>
+      <tr *ngFor="let locat of locats; index as i">
+
+        <td class="font-weight-bold">{{locat.ref}}</td>
+        <td class="font-weight-bold">{{locat.total}}</td>
+        <td class="font-weight-bold">{{locat.totalPaye}}</td>
+        <td class="font-weight-bold">{{locat.dateLocation}}</td>
+        <td>
+          <span (click)="deleteByRef(locat)"><i class="fa fa-trash btn btn-danger"></i></span>
+          <span (click)="update(i,locat)"><i class="fa fa-edit btn btn-warning"></i></span>
+          <span (click)="findByLocationRef(locat)"><i class="fa fa-plus btn btn-info"></i></span>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+  <div class="card-footer"></div>
+</div>
+
+
+<div class="card">
+
+  <div class="card-body">
+    <table class="table table-striped">
+      <thead>
+        <th>Doc</th>
+        <th>ref</th>
+        <th>qte</th>
+        <th>prix unit</th>
+        <th>prix total</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let l of locat.locationDocs">
+        <td class="font-weight-bold">{{l.documents}}</td>
+        <td class="font-weight-bold">{{l.ref}}</td>
+        <td class="font-weight-bold">{{l.qte}}</td>
+        <td class="font-weight-bold">{{l.prixUnitaire}}</td>
+        <td class="font-weight-bold">{{l.prixTotal}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

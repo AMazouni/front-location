@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-header"> Ajouter un Document</div>
+
+
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-6"><label>Doc</label>
+        <input type="text" class="form-control"  [(ngModel)]="locatDoc.documents">
+      </div>
+      <div class="col-md-6"><label>ref</label>
+        <input type="text" class="form-control"  [(ngModel)]="locatDoc.ref">
+      </div>
+      <div class="col-md-6"><label>qte</label>
+        <input type="number" class="form-control"  [(ngModel)]="locatDoc.qte">
+      </div>
+      <div class="col-md-6"><label>prix</label>
+        <input type="number" class="form-control"  [(ngModel)]="locatDoc.prixUnitaire">
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="card-footer">
+    <button class="btn btn-outline-danger btn-light btn-block" (click)="addLocatDoc()">+</button>
+  </div>
+</div>

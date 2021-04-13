@@ -1,0 +1,27 @@
+<div class="card">
+
+  <div class="card-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+
+        <th>Doc</th>
+        <th>ref</th>
+        <th>qte</th>
+        <th>prix unit</th>
+        <th>prix total</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let locatDoc of locat.locationDocs">
+        <td class="font-weight-bold">{{locatDoc.documents}}</td>
+        <td class="font-weight-bold">{{locatDoc.ref}}</td>
+        <td class="font-weight-bold">{{locatDoc.qte}}</td>
+        <td class="font-weight-bold">{{locatDoc.prixUnitaire}}</td>
+        <td class="font-weight-bold">{{locatDoc.prixTotal}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-footer">Total : {{locat.total}}</div>
+</div>
